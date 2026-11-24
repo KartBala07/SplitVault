@@ -1,5 +1,5 @@
 /* Games room — one table, full screen. */
-import { initSetupRush } from './setuprush.js?v=7';
+import { initSetupRush } from './setuprush.js?v=8';
 
 const el = (id) => document.getElementById(id);
 const ROOM_KEY = 'sv.room';
@@ -24,11 +24,11 @@ rush.startWith('pro');
 el('toast');
 el('lock').addEventListener('click', () => sessionStorage.removeItem(ROOM_KEY));
 el('toInsta').addEventListener('click', () => {
-  if (sessionStorage.getItem('sv.room') === 'insta') location.href = 'insta.html?v=7';
+  if (sessionStorage.getItem('sv.room') === 'insta') location.href = 'insta.html?v=8';
   else {
     sessionStorage.removeItem(ROOM_KEY);
     sessionStorage.setItem('sv.next', 'insta');
-    location.href = 'index.html?v=7';
+    location.href = 'index.html?v=8';
   }
 });
 
