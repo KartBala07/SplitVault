@@ -155,5 +155,5 @@
   const l = last();
   if (savedHandle()) loadProfile(savedHandle());
   else if (l && l.type === 'post') loadPost(l.kind, l.code);
-  else showNote('Type a handle', 'Public profiles and single posts open right here — the same URL, no new tab.', null, '◎');
+  else loadProfile('instagram'); /* open with something real on screen */
 })();
