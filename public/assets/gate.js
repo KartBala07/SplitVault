@@ -58,10 +58,10 @@
     sessionStorage.setItem(ROOM_KEY, room);
     if (room === 'games') {
       say('Games room open.', true);
-      setTimeout(() => { location.href = 'games.html?v=7'; }, 260);
+      setTimeout(() => { location.href = 'games.html?v=8'; }, 260);
     } else {
       say('Instagram open.', true);
-      setTimeout(() => { location.href = 'insta.html?v=7'; }, 260);
+      setTimeout(() => { location.href = 'insta.html?v=8'; }, 260);
     }
   }
 
@@ -92,7 +92,7 @@
   const open = sessionStorage.getItem(ROOM_KEY);
   if (open === 'games' || open === 'insta') {
     sub.textContent = `You are already in the ${open === 'games' ? 'games room' : 'Instagram room'}.`;
-    foot.innerHTML = `<a href="${open === 'games' ? 'games.html' : 'insta.html'}?v=7">Continue →</a> · or enter the other key`;
+    foot.innerHTML = `<a href="${open === 'games' ? 'games.html' : 'insta.html'}?v=8">Continue →</a> · or enter the other key`;
   }
 
   paint();
