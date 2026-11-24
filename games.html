@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no" />
+<meta name="color-scheme" content="light" />
+<meta name="theme-color" content="#f7f4ea" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="Setup Rush" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<title>Setup Rush</title>
+<link rel="icon" href="favicon.svg" />
+<link rel="apple-touch-icon" href="favicon.svg" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="stylesheet" href="app.css" />
+</head>
+<body class="app">
+<main class="shell" id="shell">
+  <header class="appbar">
+    <div class="hud-block" style="padding: 5px 9px;">
+      <span>market</span>
+      <select id="srMarket" class="market-pick" aria-label="Market"></select>
+    </div>
+    <div class="grow"></div>
+    <button class="icon-btn" id="toInsta" title="Instagram room" aria-label="Instagram room">◎</button>
+    <a class="icon-btn" id="lock" href="index.html" title="Lock up" aria-label="Lock up">⏻</a>
+  </header>
+
+  <div class="field">
+    <div class="hud-top">
+      <div class="hud-block price">
+        <span>price · 15m replay</span>
+        <b id="srPx">—</b>
+      </div>
+      <div class="hud-block pnl">
+        <span>p&amp;l</span>
+        <b id="srEq">$0.00</b>
+      </div>
+    </div>
+
+    <div class="sr-stage" id="srRoot">
+      <canvas id="srChart" aria-label="Price chart"></canvas>
+      <div class="flash" id="srFlash" hidden></div>
+      <div class="position" id="srPos" hidden></div>
+
+      <div class="sheet" id="srOver" hidden>
+        <div class="card">
+          <span class="grade" id="srOverMode">PRO · BTC/USD</span>
+          <h2 id="srOverTitle">TIME</h2>
+          <p class="sub" id="srOverSub">The clock ran out.</p>
+          <div class="pnl" id="srOverPnl">$0.00</div>
+          <div class="grid3">
+            <div><span>trades</span><b id="srOverTrades">0</b></div>
+            <div><span>won</span><b id="srOverWin">—</b></div>
+            <div><span>best trade</span><b id="srOverBest">—</b></div>
+          </div>
+          <div class="actions">
+            <button class="btn primary" id="srAgain">Run it again</button>
+            <button class="btn" id="srClose">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dock">
+      <div class="meta">
+        <span id="srState">ready</span>
+        <span><b id="srTrades">0</b> trades</span>
+        <span id="srLev">25×</span>
+        <span id="srTime">—</span>
+      </div>
+      <div class="row">
+        <button class="btn icon" id="srRestart" title="New window" aria-label="New window">↻</button>
+        <div class="hint" id="srHint">hold the chart to open</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="assets/games.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+<meta name="color-scheme" content="light" />
+<meta name="theme-color" content="#f7f4ea" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="Instagram" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<title>Instagram</title>
+<link rel="icon" href="favicon.svg" />
+<link rel="apple-touch-icon" href="favicon.svg" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="stylesheet" href="app.css" />
+</head>
+<body class="app">
+<main class="shell">
+  <header class="appbar">
+    <a class="icon-btn" id="toGames" href="games.html" aria-label="Games room" title="Games room">◀</a>
+    <div class="brand" style="font-size: 15px;"><span class="mark" aria-hidden="true"></span> Instagram</div>
+    <div class="grow"></div>
+    <a class="icon-btn" id="lock" href="index.html" aria-label="Lock up" title="Lock up">⏻</a>
+  </header>
+
+  <div class="ig-bar">
+    <input id="handle" placeholder="@handle or instagram.com/p/…" aria-label="Instagram handle or link"
+           autocapitalize="none" autocorrect="off" spellcheck="false" inputmode="text" />
+    <button class="btn" id="go" style="padding: 8px 14px; font-size: 13px;">Go</button>
+  </div>
+
+  <div class="ig-frame-wrap" id="frameWrap">
+    <iframe id="igFrame" title="Instagram" referrerpolicy="no-referrer-when-downgrade"
+            sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"></iframe>
+    <div class="ig-note" id="note">
+      <div class="glyph">◎</div>
+      <b id="noteTitle">Type a handle</b>
+      <span id="noteBody">Public profiles and single posts open right here.</span>
+      <button class="btn primary" id="noteAction" hidden>Open on Instagram</button>
+    </div>
+  </div>
+
+  <div class="ig-dock">
+    <button class="btn" id="dockProfile">Profile</button>
+    <button class="btn" id="dockPost">Post</button>
+    <a class="btn icon-only" id="dockOpen" href="#" aria-label="Open in browser" title="Open in browser">↗</a>
+  </div>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/insta.js"></script>
+</body>
+</html>
