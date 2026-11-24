@@ -2,7 +2,7 @@
    x-frame-options: DENY, and a static host cannot proxy around that. */
 (() => {
   const ROOM_KEY = 'sv.room';
-  if (sessionStorage.getItem(ROOM_KEY) !== 'insta') { location.replace('index.html'); return; }
+  if (sessionStorage.getItem(ROOM_KEY) !== 'insta') { location.replace('index.html?v=7'); return; }
 
   const HANDLE_KEY = 'sv.ig.handle';
   const LAST_KEY = 'sv.ig.last';
