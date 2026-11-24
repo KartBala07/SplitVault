@@ -29,7 +29,8 @@ const money = (n) => (n < 0 ? '-$' : '$') + Math.abs(n).toLocaleString('en-US', 
 let DATA = null;
 async function loadMarkets() {
   if (DATA) return DATA;
-  const res = await fetch('/assets/markets.json', { cache: 'no-cache' });
+  /* relative: the published build lives under /SplitVault/ */
+  const res = await fetch(new URL('assets/markets.json', document.baseURI), { cache: 'no-cache' });
   if (!res.ok) throw new Error('markets.json ' + res.status);
   const raw = await res.json();
   const out = {};
