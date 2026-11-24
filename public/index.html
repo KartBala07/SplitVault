@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+<meta name="color-scheme" content="light" />
+<meta name="theme-color" content="#f7f4ea" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="SplitVault" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<title>SplitVault</title>
+<link rel="icon" href="favicon.svg" />
+<link rel="apple-touch-icon" href="favicon.svg" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="stylesheet" href="app.css" />
+</head>
+<body class="app">
+<main class="shell">
+  <div class="gate">
+    <div class="top">
+      <div class="brand"><span class="mark" aria-hidden="true"></span> SplitVault</div>
+    </div>
+
+    <div class="body">
+      <h1>Two keys.<br />Two <em>rooms</em>.</h1>
+      <p id="gateSub">Enter a four-digit key.</p>
+
+      <div class="dots" id="dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="keymsg" id="keymsg" role="status" aria-live="polite"></div>
+
+      <div class="keypad" id="keypad">
+        <button data-k="1">1</button>
+        <button data-k="2">2</button>
+        <button data-k="3">3</button>
+        <button data-k="4">4</button>
+        <button data-k="5">5</button>
+        <button data-k="6">6</button>
+        <button data-k="7">7</button>
+        <button data-k="8">8</button>
+        <button data-k="9">9</button>
+        <button class="fn" data-k="del" aria-label="Delete">⌫</button>
+        <button data-k="0">0</button>
+        <button class="fn go" data-k="go" aria-label="Unlock">→</button>
+      </div>
+    </div>
+
+    <div class="foot" id="gateFoot">games · instagram</div>
+  </div>
+</main>
+
+<script src="assets/gate.js"></script>
+</body>
+</html>

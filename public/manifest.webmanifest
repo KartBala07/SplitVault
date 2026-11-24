@@ -1,0 +1,14 @@
+{
+  "name": "SplitVault",
+  "short_name": "SplitVault",
+  "description": "Two keys, two rooms: Setup Rush on recorded candles, and Instagram in place.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f7f4ea",
+  "theme_color": "#f7f4ea",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
