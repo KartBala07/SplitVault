@@ -1,5 +1,5 @@
 /* Games room — one table, full screen. */
-import { initSetupRush } from './setuprush.js?v=4';
+import { initSetupRush } from './setuprush.js?v=5';
 
 const el = (id) => document.getElementById(id);
 const ROOM_KEY = 'sv.room';

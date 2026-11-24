@@ -425,7 +425,7 @@ export function initSetupRush({ toast }) {
     ctx.fillStyle = '#fbf9f2';
     ctx.fillRect(0, 0, W, H);
 
-    const padL = 10, padR = 62, padT = 18, padB = 42;
+    const padL = 10, padR = 76, padT = 18, padB = 42;
     const plotW = Math.max(10, W - padL - padR);
     const plotH = Math.max(10, H - padT - padB);
     const VIS = 82;
@@ -566,10 +566,12 @@ export function initSetupRush({ toast }) {
     const yl = y(st.price);
     const upBar = st.price >= forming.o;
     ctx.fillStyle = upBar ? '#1c7a4e' : '#c23a2b';
-    ctx.fillRect(padL + plotW + 2, yl - 9, padR - 10, 18);
-    ctx.fillStyle = '#f7f4ea';
+    const tagText = fmtPrice(st.price);
     ctx.font = '600 10.5px ui-monospace, Menlo, monospace';
-    ctx.fillText(fmtPrice(st.price), padL + plotW + 8, yl);
+    const tagW = Math.max(44, ctx.measureText(tagText).width + 10);
+    ctx.fillRect(padL + plotW + 1, yl - 9, tagW, 18);
+    ctx.fillStyle = '#f7f4ea';
+    ctx.fillText(tagText, padL + plotW + 5, yl);
     ctx.font = '10px ui-monospace, Menlo, monospace';
 
     /* time labels along the bottom */
